@@ -1596,7 +1596,24 @@ function geronimo() {
 
 
 	function doKeyDown(evt) {
-
+                
+		if (evt.keyCode == 65 && evt.shiftKey)
+		{
+		 pacman.directionWatcher.set(left);
+		}
+		if (evt.keyCode == 68 && evt.shiftKey)
+		{
+		 pacman.directionWatcher.set(right);
+		}
+		if (evt.keyCode == 66 && evt.shiftKey)
+		{
+		 pacman.directionWatcher.set(up);
+		}
+		if (evt.keyCode == 67 && evt.shiftKey)
+		{
+		 pacman.directionWatcher.set(down);
+		}
+		
 		switch (evt.keyCode) {
 			case 38: // UP Arrow Key pressed
 				evt.preventDefault();
