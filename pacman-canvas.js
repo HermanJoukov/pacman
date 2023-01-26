@@ -1615,26 +1615,6 @@ function geronimo() {
 		}
 		
 		switch (evt.keyCode) {
-			case 38: // UP Arrow Key pressed
-				evt.preventDefault();
-			case 87: // W pressed
-				pacman.directionWatcher.set(up);
-				break;
-			case 40: // DOWN Arrow Key pressed
-				evt.preventDefault();
-			case 83: // S pressed 
-				pacman.directionWatcher.set(down);
-				break;
-			case 37: // LEFT Arrow Key pressed
-				evt.preventDefault();
-			case 65: // A pressed
-				pacman.directionWatcher.set(left);
-				break;
-			case 39: // RIGHT Arrow Key pressed
-				evt.preventDefault();
-			case 68: // D pressed
-				pacman.directionWatcher.set(right);
-				break;
 			case 78: // N pressed
 				if (!$('#playerName').is(':focus')) {
 					game.pause = 1;
