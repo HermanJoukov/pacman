@@ -520,9 +520,11 @@ function geronimo() {
 		};
 
 		this.endGame = function (allLevelsCompleted = false) {
-			console.log('Game Over by ' + (allLevelsCompleted ? 'WIN' : 'LOSS'));
+			//console.log('Game Over by ' + (allLevelsCompleted ? 'WIN' : 'LOSS'));
 			this.pause = true;
-			this.gameOver = true;
+			//this.gameOver = true;
+		        this.newGame();
+			this.pauseResume();
 		}
 
 		this.toPixelPos = function (gridPos) {
