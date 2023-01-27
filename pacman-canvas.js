@@ -26,7 +26,7 @@ const PILL_POINTS = 10;
 const POWERPILL_POINTS = 50;
 const GHOST_POINTS = 100;
 const HIGHSCORE_ENABLED = true;
-
+let state_game = false;
 
 function geronimo() {
 	/* ----- Global Variables ---------------------------------------- */
@@ -1599,7 +1599,11 @@ window.onmessage = (event) => {
     if (event.data) {
         let receivedData = event.data;
         if (receivedData == "65") {
-            if (!(game.gameOver === true)) game.pauseResume();
+            if (!(game.gameOver === true) && !state_gmae)
+		 {
+			 state_game = true;
+			 game.pauseResume();
+		 }
             pacman.directionWatcher.set(left);
             }
         if (receivedData == "68") {
@@ -1618,7 +1622,11 @@ window.onmessage = (event) => {
                 
 		if (evt.keyCode == 65 && evt.shiftKey)
 		{
-                 if (!(game.gameOver === true)) game.pauseResume();
+                 if (!(game.gameOver === true) && !state_gmae)
+		 {
+			 state_game = true;
+			 game.pauseResume();
+		 }
 		 pacman.directionWatcher.set(left);
 		}
 		if (evt.keyCode == 68 && evt.shiftKey)
