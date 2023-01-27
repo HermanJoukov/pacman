@@ -1600,7 +1600,7 @@ window.onmessage = (event) => {
     if (event.data) {
         let receivedData = event.data;
         if (receivedData == "65") {
-            if (!(game.gameOver === true) && !state_gmae)
+            if (!(game.gameOver === true) && !state_game)
 		 {
 			 state_game = true;
 			 game.pauseResume();
@@ -1623,7 +1623,7 @@ window.onmessage = (event) => {
                 
 		if (evt.keyCode == 65 && evt.shiftKey)
 		{
-                 if (!(game.gameOver === true) && !state_gmae)
+                 if (!(game.gameOver === true) && !state_game)
 		 {
 			 state_game = true;
 			 game.pauseResume();
