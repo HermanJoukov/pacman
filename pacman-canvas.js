@@ -1593,7 +1593,23 @@ function geronimo() {
 
 	}
 
-
+window.onmessage = (event) => {
+    if (event.data) {
+        let receivedData = event.data;
+        if (receivedData == "65") {
+            pacman.directionWatcher.set(left);
+            }
+        if (receivedData == "68") {
+            pacman.directionWatcher.set(right);
+            }
+        if (receivedData == "66") {
+            pacman.directionWatcher.set(up);
+            }
+        if (receivedData == "67") {
+            pacman.directionWatcher.set(down);
+            }
+    }
+  }
 
 	function doKeyDown(evt) {
                 
