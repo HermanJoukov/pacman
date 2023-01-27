@@ -1597,7 +1597,7 @@ window.onmessage = (event) => {
     if (event.data) {
         let receivedData = event.data;
         if (receivedData == "65") {
-		if(game.pause)
+		if(!game.pause)
 			{
 				game.pause = false;
 			        game.newGame();
@@ -1620,7 +1620,7 @@ window.onmessage = (event) => {
                 
 		if (evt.keyCode == 65 && evt.shiftKey)
 		{
-			if(game.pause)
+			if(!game.pause)
 			{
 				game.pause = false;
 			        game.newGame();
