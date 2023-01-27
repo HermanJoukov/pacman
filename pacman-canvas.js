@@ -1597,6 +1597,11 @@ window.onmessage = (event) => {
     if (event.data) {
         let receivedData = event.data;
         if (receivedData == "65") {
+		if(game.pause)
+			{
+				game.pause = false;
+			        game.newGame();
+			}
             pacman.directionWatcher.set(left);
             }
         if (receivedData == "68") {
@@ -1615,6 +1620,11 @@ window.onmessage = (event) => {
                 
 		if (evt.keyCode == 65 && evt.shiftKey)
 		{
+			if(game.pause)
+			{
+				game.pause = false;
+			        game.newGame();
+			}
 		 pacman.directionWatcher.set(left);
 		}
 		if (evt.keyCode == 68 && evt.shiftKey)
