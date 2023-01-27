@@ -288,7 +288,7 @@ function geronimo() {
 		this.newGame = function () {
 			var r = confirm("Are you sure you want to restart?");
 			if (r) {
-				console.log("new Game");
+				//console.log("new Game");
 				this.init(0);
 				this.forceResume();
 			}
@@ -525,6 +525,7 @@ function geronimo() {
 			//this.gameOver = true;
 		        this.newGame();
 			this.pauseResume();
+			state_game = false;
 		}
 
 		this.toPixelPos = function (gridPos) {
